@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home page</title>
+    <script type="text/javascript">
+        function changePage(pageName) {
+            window.location = 'http://localhost:8081/'+pageName;
+        }
+    </script>
+</head>
+<body>
+<p>Oh yea baby now we cookin with gas.</p>
+<p id="val"></p>
+
+<button onclick="changePage('test');">next page</button>
+<button onclick="changePage('getAllUsers');">get all users</button>
+</body>
+</html>
