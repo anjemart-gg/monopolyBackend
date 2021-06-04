@@ -1,7 +1,9 @@
 package com.monoply.boardResources.controllers;
 
 import com.google.gson.Gson;
+import com.monoply.boardResources.entities.SpaceEntity;
 import com.monoply.boardResources.entities.TestEntity;
+import com.monoply.boardResources.repositories.testRepos.SpaceRepository;
 import com.monoply.boardResources.repositories.testRepos.TestRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.boot.autoconfigure.gson.GsonBuilderCustomizer;
@@ -16,8 +18,7 @@ import java.util.List;
 @RequiredArgsConstructor
 public class TestController {
 
-    private final TestDBController testDBController;
-    private final TestRepository testRepository;
+    private final SpaceRepository spaceRepository;
 
     @GetMapping("/")
     public String homePage() {
@@ -29,11 +30,9 @@ public class TestController {
         return "test";
     }
 
-    @GetMapping("/getAllUsers")
+    @GetMapping("/getSpaceInfo")
     @ResponseBody
     public String setVal() {
-        List<TestEntity> entities = testRepository.findAll();
-        String json = new Gson().toJson(entities);
-        return json;
+        return new Gson().toJson(spaceRepository.findAll());
     }
 }

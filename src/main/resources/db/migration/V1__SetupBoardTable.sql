@@ -15,6 +15,8 @@ create table if not exists board_resources(
   property_grouping int
 );
 
---insert into board_resources()
---values()
---,()
+insert into board_resources(location, space_name, price, owner, house_count, hotel_count, land_price, house_multiplier,
+                            hotel_multiplier, mortgage_value, property_grouping)
+values(1,'GO',null,null,null,null,null,null,null,null,null)
+,(2,'Mediterranian Avenue',60,null,null,2,null,null,null,null,0)
+;
