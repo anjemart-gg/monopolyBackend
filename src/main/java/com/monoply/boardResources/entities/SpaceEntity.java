@@ -42,4 +42,8 @@ public class SpaceEntity {
 
     private Integer propertyGrouping;
 
+    private Integer leftPos;
+
+    private Integer topPos;
+
 }
