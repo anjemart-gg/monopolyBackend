@@ -1,24 +1,17 @@
 package com.monoply.boardResources.controllers;
 
 import com.google.gson.Gson;
-import com.monoply.boardResources.entities.SpaceEntity;
-import com.monoply.boardResources.entities.TestEntity;
 import com.monoply.boardResources.repositories.testRepos.SpaceRepository;
-import com.monoply.boardResources.repositories.testRepos.TestRepository;
 import lombok.RequiredArgsConstructor;
-import org.springframework.boot.autoconfigure.gson.GsonBuilderCustomizer;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import java.util.HashMap;
-import java.util.List;
-
 @Controller
 @RequiredArgsConstructor
 @CrossOrigin(origins = "http://localhost:3000")
-public class TestController {
+public class SpaceController {
 
     private final SpaceRepository spaceRepository;
 
