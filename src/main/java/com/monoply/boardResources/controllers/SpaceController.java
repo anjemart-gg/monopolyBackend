@@ -2,6 +2,7 @@ package com.monoply.boardResources.controllers;
 
 import com.google.gson.Gson;
 import com.monoply.boardResources.repositories.testRepos.SpaceRepository;
+import com.monoply.boardResources.service.SpaceService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -13,7 +14,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @CrossOrigin(origins = "http://localhost:3000")
 public class SpaceController {
 
-    private final SpaceRepository spaceRepository;
+    private final SpaceService spaceService;
 
     @GetMapping("/")
     public String homePage() {
@@ -28,6 +29,6 @@ public class SpaceController {
     @GetMapping("/getSpaceInfo")
     @ResponseBody
     public String setVal() {
-        return new Gson().toJson(spaceRepository.findAll());
+        return new Gson().toJson(spaceService.getAllSpaces());
     }
 }

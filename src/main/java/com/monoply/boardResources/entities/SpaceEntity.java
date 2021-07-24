@@ -46,4 +46,5 @@ public class SpaceEntity {
 
     private Integer topPos;
 
+    private Integer boardGroup;
 }

@@ -1,0 +1,17 @@
+type SpaceEntity {
+    id: ID
+    spaceName: String
+    price: Int
+    owner: Int
+    houseCount: Int
+    hotelCount: Int
+    landPrice: Int
+    location: Int
+    houseMultiplier: Float
+    hotelMultiplier: Float
+    mortgageValue: Int
+    propertyGrouping: Int
+    leftPos: Int
+    topPos: Int
+    boardGroup: Int
+}
